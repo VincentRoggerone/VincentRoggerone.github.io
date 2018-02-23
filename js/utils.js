@@ -1,17 +1,19 @@
 function sidebar(){
-	document.write('<div id="sidebar"> <div id="sidebar-fixed"> <img src="myphoto.jpg" title="my photo" id="my_photo" /> <h3>Contact</h3> <p> Albert Einstein College of Medicine, <br /> Block Research Pavilion, <br /> Department of Systems and Computational Biology, <br /> 1301 Morris Park Avenue, <br /> 10461 Bronx, NY <br /> USA <br /> firstname.lastname@einstein.yu.edu<br /> <a href="#">https://jonathanvacher.github.io/</a></p> <h3>Acknowledgements</h3> <p> Thanks to Manon Esnouf for the amazing photo ! </p> </div></div>');	
+	document.write('<div id="sidebar"> <div id="sidebar-fixed"> <img src="Id_cercle.png" title="my photo" id="my_photo" width="250"/> <h3>Contact</h3> <p> Mcgill Campus <br /> School of information Studies <br /> 3661 Rue Peel <br /> Montréal, QC H3A 1X1 <br /> Canada <br /> firstname.lastname@mcgill.ca <br /> <a href="#">https://vincentroggerone.github.io/</a></p> </div></div>');	
 		}
 
 
 function banner(){
-	document.write('<div id="banner"> <div id="name"> <h1>Jonathan Vacher</h1> <p>PhD</p> <p>Department of Systems and Computational Biology </p> <p>Albert Einstein College of Medicine, New York</p> </div> <div id="welc"> <h1>Welcome</h1> </div> </div>');	
+	document.write('<div id="banner"> <div id="name"> <h1>Vincent Roggerone</h1> <p>PhD in Acoustic</p> <p> School of Information Studies </p> <p>McGill, Montréal, CANADA</p> </div> <div id="welc"> <h1> Bienvenue </h1> </div> </div>');	
+		}
+		
+		
+function navbar(){
+	document.write('<div id="nav"> <ul> <li> <a class="active" href="index.html">Home</a></li> <li><a href="research.html">Research</a></li><li><a href="publi.html">Publications</a></li><li><a href="CV.html">CV</a></li><li><a href="friends.html">Collaborators/Friends</a></li></ul></div>');	
 		}
 
-function news(title,text){
-
-document.write('<div id="news"> <p> <t2>' + title + '</t2> <br /><br />' + text + '</p> </div>');
-
-}
-
 		
-
+function footbar(){
+	document.write('<div id="footer"><div id="copyright"> &copy; Vincent Roggerone. Thanks to the University Of Colorado Boulder for the tutorial and template. </div></div>');	
+		}
+		
