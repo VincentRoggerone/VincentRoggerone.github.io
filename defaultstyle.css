@@ -14,59 +14,210 @@ a.current:link, a.current:visited {
 }
 img { border:none; }
 
+
+
+
+/* 
+	-------------------
+	-------------------
+	-------------------
+	Object definition
+	-------------------
+	-------------------
+	-------------------
+*/
+
 body {
 	margin:0;
 	padding:0;
 	background-color:#333;
-	color:#333;
+	/*color:#333;*/
 	font-family:Georgia;
 }
 
+
+h1 {
+	margin:0;
+	padding: 10px;
+	font-size:36px;
+	font-weight: normal;
+	
+	
+}
+
+h2 {
+	margin-top:0;
+	color:#494949;
+	font-weight:normal;
+	font-size:200%;
+}
+t1 {
+	width: 850px;
+	margin: 0;
+	padding: 0px;
+	line-height:105%;
+	font-size:44px;
+	font-weight: bold;
+}
+
+t2{
+	margin-bottom:200px;
+	padding: 10px 0px;
+	line-height:105%;
+	font-size:30px;
+	font-weight: bold;
+}
+t3
+{
+	margin-bottom:100px;
+	padding: 10px 0px;
+	font-size:22px;
+	font-weight: bold;
+}
+
+hr.a{
+     color: #333;
+	 background: #333;
+     width: 680px; 
+     height: 2px;
+	 text-align:left;
+	 margin-bottom: 50px;
+}
+hr.b{
+     color: #333;
+	 background: #333;
+     width: 680px; 
+     height: 1px;
+	 text-align:left;
+	 margin-bottom: 25px;
+}
+
+.right {
+	float:right;
+	margin: 0 0 15px 15px;
+}
+.left {
+	float:left;
+	margin:0 15px 15px 0;
+}
+
+h3.feed-title{
+	margin-bottom:200px;
+	padding: 10px 0px;
+	font-size:130px;
+	font-weight: bold;
+}
+
+
+/*
+	-------------------
+	-------------------
+	-------------------
+	Container and general page setting
+	-------------------
+	-------------------
+	-------------------
+*/
+
 #container {
-	width:1200px;
+	max-width:1200px;
+	min-width:720px;
+	
 	margin:auto;
 	font-size:14px;
 	position: relative;
-	-moz-border-radius-topleft:10px;
-	-webkit-border-top-left-radius:10px;
-	-moz-border-radius-topright:10px;
-	-webkit-border-top-right-radius:10px;
-	overflow: hidden;
+
 
 }
 
-#wrapper {
- box-shadow: 0 0 5px #222;
- -webkit-box-shadow: 0 0 5px #222;
- -moz-box-shadow: 0 0 5px #222;
 
-	margin:0px 0;
-	overflow:hidden;
-	-moz-border-radius-topleft:10px;
-	-webkit-border-top-left-radius:10px;
-	-moz-border-radius-topright:10px;
-	-webkit-border-top-right-radius:10px;
+#page {
+	background-color:#EEE;
+	
+	/*border-top:1px solid #e5e5e5;*/
+	/*overflow:auto;*/
+	width: 100%;
+	box-sizing: border-box;
+	padding: 15px 10px;
+	/*clear: both;*/
+	/*
+	-moz-border-radius-bottomleft:10px;
+	-webkit-border-bottom-left-radius:10px;
+	-moz-border-radius-bottomright:10px;
+	-webkit-border-bottom-right-radius:10px;
+	*/%;
+}
 
 
-}	
+#content {
+	margin-left:15px;
+	margin-right:15px;
+	/*line-height:160%;*/
+	
+	max-width: 1000px;
+	min-width: 570px;
+	
+	width:80%;
+}
+
+
+#footer {
+	
+	
+	width:100%;
+	/*background-color:#EEE;*/
+	
+	
+	box-sizing: border-box;
+	padding:10px 15px 20px;	
+	
+	font-size:90%;
+	text-align:left;
+	
+	border-top:2px solid #333;
+}
+
+/* 
+	-------------------
+	-------------------
+	-------------------
+	Banner elements
+	-------------------
+	-------------------
+	-------------------
+*/
+
+
 #banner {
 	color:#FFF;
 	
-	width: 1200px;
-	height: 390px; 
+	width: 100%;
+	height: 300px; 
 	
-	margin:0;
+	margin:0px;
 	font-family: Georgia;
 	background-image: url(ClimbingWP.jpg) ;
 	background-repeat: no-repeat;
     background-color:#FFF;
  	background-size: cover;
 	/*height: 390px;*/
+	
+	-moz-border-radius-topleft:10px;
+	-webkit-border-top-left-radius:10px;
+
+	-moz-border-radius-topright:10px;
+	-webkit-border-top-right-radius:10px;
+
+	-moz-border-radius-bottomright:10px;
+	-webkit-border-bottom-right-radius:10px;
+
+	-moz-border-radius-bottomleft:10px;
+	-webkit-border-bottom-left-radius:10px;
 }
 #name {
 	z-index: 1;
 	position: absolute;
-	top:105px;
+	top:25px;
 	left:0px;
 	float: left;
 	background-image:url(black50.png);
@@ -77,23 +228,16 @@ body {
 }
 #welc {
 	position: absolute;
-	top:305px;
-	left:00px;
-	float: left;
+	top:200px;
+	right:00px;
+	float: right;
 	background-image:url(black50.png);
-	-moz-border-radius-topright:10px;
-	-webkit-border-top-right-radius:10px;
-	-moz-border-radius-bottomright:10px;
-	-webkit-border-bottom-right-radius:10px;
+	-moz-border-radius-topleft:10px;
+	-webkit-border-top-left-radius:10px;
+	-moz-border-radius-bottomleft:10px;
+	-webkit-border-bottom-left-radius:10px;
 }
-h1 {
-	margin:0;
-	padding: 10px;
-	font-size:36px;
-	font-weight: normal;
-	
-	
-}
+
 #name p {
 	margin:0;
 	padding: 5px 10px;
@@ -102,107 +246,170 @@ h1 {
 	
 	
 }
-#nav {
-   
+
+
+
+/*	-------------------
+	-------------------
+	-------------------
+	Barre de navigation
+	-------------------
+	-------------------
+	-------------------
+*/
+
+#nav {	
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	
+	/*prédéfinir la taille et la position en z*/
+	height:30px;
+	background-color: #333;
+	z-index: 10;
+
 }
 #nav ul {
-   width:1200px;
-   z-index: 10;
-  
-   list-style:none;
+	/*enlever les param par defaut des listes */
+   list-style:none; 
    margin:0;
    padding:0;
-   background-color: #333;
-    -moz-border-radius-topleft:0px;
-	-webkit-border-top-left-radius:0px;
-	-moz-border-radius-topright:0px;
-	-webkit-border-top-right-radius:0px;
-   position: fixed;
+ 
   }
 #nav ul li {
-   display:block;
-   float:left;
-   list-style:none;
-   margin:0;
-   padding:0;
-  
+	/* Stacker les liste de lien à gauche (horizontal) */
+	   float:left;
+   
 }
 #nav ul li a {
-   display:block;
-   margin:0 0 0 0px;
-   padding:0px 15px;
-   color:#fff;
-   text-decoration:none;
-   line-height:30px;
-   font-size: 18px;
+
+	
+	display:block;
+	background-color:#333;
+	line-height:30px; /*centre le texte*/
+	
+	
+	margin:0;
+	padding:0px 15px;
+   
+	color:#fff;
+	text-decoration:none;
+	font-size: 20px;
    
 }
 #nav ul li a:hover {
-   color:#ce1414;
+   /* Change la couleur de l'arrière plan lorsqu'on passe la souris */
+   background-color: #666;
 }
 #nav li a.active {
+	/* La page active a son texte en rouge*/
     color: #ce1414;
-	font-size: 20px;
 }
 
+/*
 #nav li {
    margin:0 0 0 0px;
    padding:0px 0px;
    padding-left:10px;
    color:#333;
    text-decoration:none;
-   line-height:30px;
    font-size: 28px;
 }
 
 #nav li a {
     margin-left:-30px;
-    color:#000; /* black text */
+    color:#000; 
+}
+*/
+
+/* 
+	-------------------
+	-------------------
+	-------------------
+	Side bar
+	-------------------
+	-------------------
+	-------------------
+*/
+
+#sidebar{
+	min-width:150px;
+	max-width:200px;
+	
+	width:15%;
+	
+	background-color:#EEE;
+	border: 1px solid #9a0f0f;
+	
+	-moz-border-radius-topleft:30px;
+	-webkit-border-top-left-radius:30px;
+
+	-moz-border-radius-topright:30px;
+	-webkit-border-top-right-radius:30px;
+
+	-moz-border-radius-bottomright:30px;
+	-webkit-border-bottom-right-radius:30px;
+
+	-moz-border-radius-bottomleft:30px;
+	-webkit-border-bottom-left-radius:30px;
+	
+	float:right;
+	right:10px;
+	padding-top: 10px;
+	
+	/*sticky position*/
+	position: -webkit-sticky;
+	position: sticky;
+	top: 30px;
+
+	/* Above the navbar */
+	z-index: 15;
+	
+	/*Shadow, add a coma and same set of paremters for double the shadow*/
+	/* param : offset droite, offset bas, fondu, epaisseur, couleur, mot clé*/
+	
+	-webkit-box-shadow: 3px 3px 3px 3px gray;
+	
 }
 
-#page {
-	background-color:#EEE;
-	border-top:1px solid #e5e5e5;
-	overflow:auto;
-	padding:15px 0; 
-	clear: both;
-	/*
-	-moz-border-radius-bottomleft:10px;
-	-webkit-border-bottom-left-radius:10px;
-	-moz-border-radius-bottomright:10px;
-	-webkit-border-bottom-right-radius:10px;
-	*/
-}
-#sidebar {
-	min-width:210px;
-	max-width:280px;
-	margin:0 75px;
-	float:right;
-	line-height:140%;
-	background-color:#EEE;
-	border: 1px solid #E5E5E5;
-}
-#sidebar-fixed {
-	min-width:210px;
-	max-width:280px;
-	/*margin:0 15px;
-	float:right;
-	right: 300px;*/
-	bottom: 0px;
-	line-height:140%;
-	background-color:#EEE;
-	border: 1px solid #E5E5E5;
-	position: fixed;
+#sidebar h3{
+	/*texte a l'interieur paddé*/
+	/*padding:5px;*/
+	font-family:helvetica;
+	font-style: italic;
+	margin-left: auto;
+	margin-right: auto;
+	width:100px;
+	}
+
+ul.sideb {
+    list-style-type: none;
+	margin:10px 2px;
+	padding:3px;
+	
+	font-family:helvetica;
 }
 
-#sidebar h3, #sidebar p {
-	padding:0 10px;
+ul.sidea{
+    list-style-type: none;
+	margin:10px 2px;
+	padding:3px;
+	font-size:12px;
+	font-family:courier;
+	text-align:middle;
 }
-#content {
-	margin-left:15px;
-	margin-right:15px;
-	line-height:160%;
+
+img.center {
+	display:block;
+	margin: auto;
 }
+
+/* 
+	----------------
+	Content text format definition
+	----------------
+*/
+
 #title{
 	min-width: 680px;
 	max-width: 870px;
@@ -295,29 +502,35 @@ h1 {
 	font-size:20px;
 	font-weight: bold;
 }
-.clearfix {
+/*.clearfix {
     overflow: auto;
-}
-#footer {
-	background-color:#EEE;
-	padding:15px;	
-	overflow:auto;
-	font-size:90%;
-	text-align:left;
-}
-#footer img {
-	float:left; 
-	margin-right:15px;
-}
+}*/
+/*
 #copyright {
-	min-width: 680px;
-	max-width: 850px;
+	min-width: 720px;
+	max-width: 1200px;
 	float: center;
 	margin-top:10px;
-	border-top:2px solid #333;
 	padding: 5px 0px;
 
 }
+*/
+
+
+
+/*
+	-------------------
+	Titre/Texte/hierarchie style definition
+	-------------------
+*/
+
+h1 {
+	margin:0;
+	padding: 10px;
+	font-size:36px;
+	font-weight: normal;
+	
+	
 }
 
 h2 {
@@ -327,7 +540,7 @@ h2 {
 	font-size:200%;
 }
 t1 {
-	width: 850px;
+	width: 100%;
 	margin: 0;
 	padding: 0px;
 	line-height:105%;
@@ -336,7 +549,8 @@ t1 {
 }
 
 t2{
-	margin-bottom:200px;
+	width: 100%;
+	margin-bottom:100px;
 	padding: 10px 0px;
 	line-height:105%;
 	font-size:30px;
@@ -344,6 +558,7 @@ t2{
 }
 t3
 {
+	width: 100%;
 	margin-bottom:100px;
 	padding: 10px 0px;
 	font-size:22px;
@@ -385,6 +600,12 @@ h3.feed-title{
 
 
 
+/*
+	--------------------
+	Content bar ?
+	--------------------	
+*/
+/*
 #contentbar {
 	width:210px;
 	margin-top: 0;
@@ -395,7 +616,7 @@ h3.feed-title{
 	line-height:140%;
 	background-color:#FFF;
 /*	border: 1px solid #E5E5E5;*/
-}
+/*}
 
 #contentbar h3, #contentbar p {
 	padding:0 10px;
@@ -404,7 +625,7 @@ h3.feed-title{
 #name p {padding-left:2em}
 /* uncomment the specific line to hide the content div on specific pages */
 /*.contentbar1 {display:none}  */
-.contentbar2 {display:none}  
-/*.contentbar3 {display:none}  
+/*.contentbar2 {display:none}  */
+/*.contentbar3 {display:none}  */
 /* .contentbar4 {display:none}  */
 /* .contentbar5 {display:none}  */
