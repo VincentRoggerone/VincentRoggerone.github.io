@@ -1,6 +1,14 @@
 @charset "utf-8";
 /* CSS Document */
 
+/*DA fuck is dat ?*/
+
+/* 
+	-------------------
+	Classic shit for nice looking link
+	-------------------
+*/
+
 a:link, a:visited {
 	text-decoration:none;
 	color:#065388;
@@ -21,7 +29,7 @@ img { border:none; }
 	-------------------
 	-------------------
 	-------------------
-	Object definition
+	Text Format definition
 	-------------------
 	-------------------
 	-------------------
@@ -35,78 +43,104 @@ body {
 	font-family:Georgia;
 }
 
+/*main style*/
+p{
+	font-size:18px;
+	padding:5px 10px;
+	margin:0;
+	font-weight: normal;
+	color:black;
+}
 
+
+
+ul {
+	/*enlever les param par defaut des listes */
+   list-style:circle; 
+   margin:0 10px;
+  }
+  
+  
+/*I using this format in banner*/
 h1 {
 	margin:0;
 	padding: 10px;
 	font-size:36px;
 	font-weight: normal;
-	
-	
 }
-
-h2 {
-	margin-top:0;
-	color:#494949;
-	font-weight:normal;
-	font-size:200%;
+/*déco des liens*/
+h2{
+	font-size:20px;
+	padding:5px 10px;
+	margin:0;
+	font-weight: bold;
+	text-decoration: underline;
 }
+/*Title police*/
 t1 {
-	width: 850px;
-	margin: 0;
-	padding: 0px;
-	line-height:105%;
+	line-height:125%;
 	font-size:44px;
 	font-weight: bold;
 }
 
 t2{
-	margin-bottom:200px;
-	padding: 10px 0px;
-	line-height:105%;
 	font-size:30px;
 	font-weight: bold;
+	color:#6D1300;
 }
-t3
-{
-	margin-bottom:100px;
-	padding: 10px 0px;
-	font-size:22px;
+t3{
+	font-size:24px;
 	font-weight: bold;
 }
 
-hr.a{
-     color: #333;
-	 background: #333;
-     width: 680px; 
-     height: 2px;
-	 text-align:left;
-	 margin-bottom: 50px;
-}
-hr.b{
-     color: #333;
-	 background: #333;
-     width: 680px; 
-     height: 1px;
-	 text-align:left;
-	 margin-bottom: 25px;
-}
 
-.right {
-	float:right;
-	margin: 0 0 15px 15px;
-}
-.left {
-	float:left;
-	margin:0 15px 15px 0;
-}
+/* 
+	----------------
+	Custom Div definition
+	----------------
+*/
 
-h3.feed-title{
-	margin-bottom:200px;
-	padding: 10px 0px;
-	font-size:130px;
+
+#myt1{	
+	/*float: center;*/
+	margin-bottom:10px;
+	margin-top:10px;
+	border-bottom:5px solid #333;
+	
+	box-sizing: border-box;
+	/*padding: 10px 0px;*/
+	margin-left:0;
+	margin-right:0;
+	
+	/*FONT*/
+	line-height:125%;
+	font-size:44px;
 	font-weight: bold;
 }
+
+
+#myt2{	
+	/*margin-bottom:10px;*/
+	
+	box-sizing: border-box;
+	padding: 10px 10px;
+	
+	font-size:30px;
+	font-weight: bold;
+	color:#6D1300;
+	
+}
+
+#myt3{	
+	margin-bottom:10px;
+	box-sizing: border-box;
+	padding: 10px 20px;
+	
+	
+	font-size:24px;
+	font-weight: bold;
+}
+
 
 
 /*
@@ -121,7 +155,7 @@ h3.feed-title{
 
 #container {
 	max-width:1200px;
-	min-width:720px;
+	/*min-width:720px;*/
 	
 	margin:auto;
 	font-size:14px;
@@ -150,23 +184,41 @@ h3.feed-title{
 
 
 #content {
-	margin-left:15px;
-	margin-right:15px;
+	box-sizing: border-box;
+	padding-top:1px; /*prevent nav bar to conflict with title*/
+	
+	margin-left:0px;
+	margin-right:0px;
 	/*line-height:160%;*/
 	
 	max-width: 1000px;
-	min-width: 570px;
+	/*min-width: 570px;*/
 	
 	width:80%;
 }
 
 
+/*Fonction pour enlever la side bar si l'ecran est trop petit --> Et afficher a 100%*/
+@media screen and (max-width: 1000px) {
+#content {
+    width: -webkit-calc(100% - 170px);
+    width:    -moz-calc(100% - 170px);
+    width:         calc(100% - 170px);}
+}
+
+/*Fonction pour enlever la side bar si l'ecran est trop petit --> Et afficher a 100%*/
+@media screen and (max-width: 635px) {
+#content {width: 100%;}}
+
+
+
+
+
 #footer {
-	
 	
 	width:100%;
 	/*background-color:#EEE;*/
-	
+	color:#EEE;
 	
 	box-sizing: border-box;
 	padding:10px 15px 20px;	
@@ -267,6 +319,7 @@ h3.feed-title{
 	height:30px;
 	background-color: #333;
 	z-index: 10;
+	
 
 }
 #nav ul {
@@ -306,21 +359,7 @@ h3.feed-title{
     color: #ce1414;
 }
 
-/*
-#nav li {
-   margin:0 0 0 0px;
-   padding:0px 0px;
-   padding-left:10px;
-   color:#333;
-   text-decoration:none;
-   font-size: 28px;
-}
 
-#nav li a {
-    margin-left:-30px;
-    color:#000; 
-}
-*/
 
 /* 
 	-------------------
@@ -334,7 +373,7 @@ h3.feed-title{
 
 #sidebar{
 	min-width:150px;
-	max-width:200px;
+	max-width:180px; /*limit to 180px en pratique car en % de la width du container*/
 	
 	width:15%;
 	
@@ -353,6 +392,8 @@ h3.feed-title{
 	-moz-border-radius-bottomleft:30px;
 	-webkit-border-bottom-left-radius:30px;
 	
+	
+	box-sizing: border-box;
 	float:right;
 	right:10px;
 	padding-top: 10px;
@@ -360,7 +401,7 @@ h3.feed-title{
 	/*sticky position*/
 	position: -webkit-sticky;
 	position: sticky;
-	top: 30px;
+	top: 40px;
 
 	/* Above the navbar */
 	z-index: 15;
@@ -368,9 +409,14 @@ h3.feed-title{
 	/*Shadow, add a coma and same set of paremters for double the shadow*/
 	/* param : offset droite, offset bas, fondu, epaisseur, couleur, mot clé*/
 	
-	-webkit-box-shadow: 3px 3px 3px 3px gray;
+	-webkit-box-shadow: 2px 2px 5px 2px gray;
 	
 }
+
+/*Fonction pour enlever la side bar si l'ecran est trop petit*/
+@media screen and (max-width: 635px) {
+#sidebar {display: none;}}
+
 
 #sidebar h3{
 	/*texte a l'interieur paddé*/
@@ -394,238 +440,12 @@ ul.sidea{
     list-style-type: none;
 	margin:10px 2px;
 	padding:3px;
-	font-size:12px;
+	font-size:13px;
 	font-family:courier;
-	text-align:middle;
+	text-align:right;
 }
 
 img.center {
 	display:block;
 	margin: auto;
 }
-
-/* 
-	----------------
-	Content text format definition
-	----------------
-*/
-
-#title{
-	min-width: 680px;
-	max-width: 870px;
-	float: center;
-	margin-bottom:10px;
-	/*border-bottom:3px solid #333;*/
-	padding: 10px 0px;
-}
-#titleS{
-	min-width: 680px;
-	max-width: 870px;
-	float: center;
-	margin-bottom:10px;
-	border-bottom:5px solid #333;
-	padding: 10px 0px;
-}
-#news{
-	min-width: 680px;
-	max-width: 870px;
-	float: center;
-	margin-bottom:10px;
-	border-bottom:2px solid #333;
-	padding: 10px 0px;
-}
-#news p{
-	width: 850px;
-	font-size:20px;
-}
-#news_f{
-	min-width: 680px;
-	max-width: 870px;
-	float: center;
-	margin-bottom:10px;
-	padding: 10px 0px;
-}
-#news_f p{
-	width: 850px;
-	font-size:20px;
-}
-#course{
-	min-width: 680px;
-	max-width: 870px;
-	float: center;
-	margin-bottom:1px;
-	border-bottom:2px solid #333;
-	padding: 1px 0px;
-}
-#course p{
-	width: 850px;
-	font-size:20px;
-}
-#course_f{
-	min-width: 850px;
-	float: center;
-	margin-bottom:1px;
-	padding: 1px 0px;
-}
-#course_f p{
-	width: 850px;
-	font-size:20px;
-}
-#paper{
-	min-width: 680px;
-	max-width: 850px;
-	float: center;
-	margin-bottom:1px;
-	border-bottom:2px solid #333;
-	padding: 1px 0px;
-}
-#paper p{
-	width: 850px;
-	font-size:20px;
-}
-#paper t3{
-	font-size:20px;
-	font-weight: bold;
-}
-#paper_f{
-	min-width: 680px;
-	max-width: 850px;
-	float: center;
-	margin-bottom:1px;
-	padding: 1px 0px;
-}
-#paper_f p{
-	width: 850px;
-	font-size:20px;
-}
-#paper_f t3{
-	font-size:20px;
-	font-weight: bold;
-}
-/*.clearfix {
-    overflow: auto;
-}*/
-/*
-#copyright {
-	min-width: 720px;
-	max-width: 1200px;
-	float: center;
-	margin-top:10px;
-	padding: 5px 0px;
-
-}
-*/
-
-
-
-/*
-	-------------------
-	Titre/Texte/hierarchie style definition
-	-------------------
-*/
-
-h1 {
-	margin:0;
-	padding: 10px;
-	font-size:36px;
-	font-weight: normal;
-	
-	
-}
-
-h2 {
-	margin-top:0;
-	color:#494949;
-	font-weight:normal;
-	font-size:200%;
-}
-t1 {
-	width: 100%;
-	margin: 0;
-	padding: 0px;
-	line-height:105%;
-	font-size:44px;
-	font-weight: bold;
-}
-
-t2{
-	width: 100%;
-	margin-bottom:100px;
-	padding: 10px 0px;
-	line-height:105%;
-	font-size:30px;
-	font-weight: bold;
-}
-t3
-{
-	width: 100%;
-	margin-bottom:100px;
-	padding: 10px 0px;
-	font-size:22px;
-	font-weight: bold;
-}
-
-hr.a{
-     color: #333;
-	 background: #333;
-     width: 680px; 
-     height: 2px;
-	 text-align:left;
-	 margin-bottom: 50px;
-}
-hr.b{
-     color: #333;
-	 background: #333;
-     width: 680px; 
-     height: 1px;
-	 text-align:left;
-	 margin-bottom: 25px;
-}
-
-.right {
-	float:right;
-	margin: 0 0 15px 15px;
-}
-.left {
-	float:left;
-	margin:0 15px 15px 0;
-}
-
-h3.feed-title{
-	margin-bottom:200px;
-	padding: 10px 0px;
-	font-size:130px;
-	font-weight: bold;
-}
-
-
-
-/*
-	--------------------
-	Content bar ?
-	--------------------	
-*/
-/*
-#contentbar {
-	width:210px;
-	margin-top: 0;
-	margin-right: 15px;
-	margin-bottom: 0;
-	margin-left: 0px;
-	float:left;
-	line-height:140%;
-	background-color:#FFF;
-/*	border: 1px solid #E5E5E5;*/
-/*}
-
-#contentbar h3, #contentbar p {
-	padding:0 10px;
-}
-#my_photo {margin-left:auto; margin-right:auto; display:block; padding:10px;}
-#name p {padding-left:2em}
-/* uncomment the specific line to hide the content div on specific pages */
-/*.contentbar1 {display:none}  */
-/*.contentbar2 {display:none}  */
-/*.contentbar3 {display:none}  */
-/* .contentbar4 {display:none}  */
-/* .contentbar5 {display:none}  */
