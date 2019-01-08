@@ -18,21 +18,10 @@ function banner(){
 					'</div>'+
 				   '</div>');	
 		}
-		
-		
-function navbar(){
-	document.write('<div id="nav">'+
-					'<ul>'+
-						'<li><a class="active" href="index.html">Home</a></li>'+
-						'<li><a href="research.html">Research</a></li>'+
-						'<li><a href="publi.html">Publications</a></li>'+
-						'<li><a href="CV.html">CV</a></li>'+
-						'<li><a href="friends.html">Collaborators/Friends</a></li>'+
-					'</ul></div>');	
-		}
-
+	
+	
 		
 function footbar(){
-	document.write('<div id="footer"> &copy; Vincent Roggerone. Thanks to the University Of Colorado Boulder for the tutorial and template. </div>');	
+	document.write('<div id="footer"> &copy; Vincent Roggerone. Thanks to John for the tutorial and template. </div>');	
 		}
 		
